@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light"><meta name="description" content="剥头皮策略互动图解：7类26种模板，逐步演练、成本实验和学习清单。全部为教学示例，不连接实盘。">
+<title>Scalp Lab · 剥头皮策略图解</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳至内容</a>
+<aside class="sidebar">
+ <button class="brand" data-nav="home" aria-label="回到学习总览"><span class="brand-mark">S<span>↗</span></span><span>SCALP LAB<small>剥头皮策略 · 图解手册</small></span></button>
+ <div class="nav-caption">YOUR LEARNING DESK</div>
+ <nav class="desktop-nav" aria-label="主导航">
+  <button data-nav="home" class="nav-item active"><span data-icon="home"></span>学习总览<span class="nav-index">01</span></button>
+  <button data-nav="map" class="nav-item"><span data-icon="grid"></span>策略地图<span class="nav-index">02</span></button>
+  <button data-nav="demo" class="nav-item"><span data-icon="play"></span>跟图演练<span class="nav-index">03</span></button>
+  <button data-nav="cost" class="nav-item"><span data-icon="calc"></span>成本实验室<span class="nav-index">04</span></button>
+  <button data-nav="plan" class="nav-item"><span data-icon="check"></span>学习与复盘<span class="nav-index">05</span></button>
+  <button data-nav="terms" class="nav-item"><span data-icon="book"></span>术语与来源<span class="nav-index">06</span></button>
+ </nav>
+ <div class="sidebar-bottom">
+  <div class="progress-caption">你的学习进度<span id="progress-label">0 / 26 节</span></div>
+  <div class="progress-track"><span id="progress-fill"></span></div>
+  <p>按自己的节奏学。<br>完成一节，再多理解一点。</p>
+  <div class="offline"><span class="status-dot"></span>本地学习 · 无实盘连接</div>
+ </div>
+</aside>
+<div class="mobile-top"><button class="brand" data-nav="home"><span class="brand-mark">S<span>↗</span></span><span>SCALP LAB</span></button><button class="round-btn" data-nav="terms" aria-label="术语与来源">?</button></div>
+<main id="main">
+ <div class="topline"><span>TRADING FIELD NOTES <span class="slash">/</span> <span id="breadcrumb">学习总览</span></span><span class="pill neutral"><span class="status-dot"></span>教学模拟 · 非实时行情</span></div>
+ <section class="view" id="view-home" aria-labelledby="home-title">
+  <div class="hero">
+   <div class="hero-copy"><div class="eyebrow"><span></span> SMALL MOVES. CLEAR THINKING.</div><h1 id="home-title">先看懂一笔交易，<br>再考虑<span class="green-text">下一笔。</span></h1><p class="hero-desc">把“剥头皮”拆开来看：赚什么钱、等什么信号、何时放弃。不是背 26 个名字，而是看懂每种假设。</p><div class="hero-actions"><button class="btn primary" data-nav="demo">开始跟图学习 <span>↗</span></button><button class="text-button" data-nav="map">浏览策略地图 <span>→</span></button></div><div class="hero-note"><span data-icon="shield"></span>不接实盘、不承诺收益，只练习理解与判断。</div></div>
+   <div class="hero-chart dark-chart"><div class="chart-top"><span><span class="tiny-light"></span> 突破—回踩确认</span><span class="mono">ILLUSTRATION / 04</span></div><div id="hero-svg"></div><div class="chart-bottom"><span><i class="key-dot"></i>先观察，再确认</span><span>失败路径同样重要 →</span></div></div>
+  </div>
+  <div class="stats-strip"><div><strong>07<span>个家族</span></strong><p>按“主要赚什么钱”分类</p></div><div><strong>26<span>种模板</span></strong><p>看条件，也看失效方式</p></div><div><strong>03<span>组演练</span></strong><p>逐步揭示，不提前看结局</p></div><div class="stat-definition"><span class="tiny-tag">先记住这句话</span><p><b>短持仓，小目标，快退出。</b><br>高频操作不等于有交易优势。</p></div></div>
+  <div class="section-heading"><div><div class="eyebrow">START HERE</div><h2>先从这三节开始</h2></div><span class="muted small">建议学习顺序，不是收益排名</span></div>
+  <div class="lesson-grid" id="home-lessons"></div>
+  <div class="section-heading"><div><div class="eyebrow">THE BIG PICTURE</div><h2>7 类策略，7 种交易假设</h2></div><button class="text-button" data-nav="map">查看全部 26 种 →</button></div>
+  <div class="family-grid" id="home-families"></div>
+  <div class="callout"><span data-icon="info"></span><p><b>这是一张研究地图，不是一份盈利菜单。</b>“7 类、26 种”是本教材的整理框架，非官方标准，也不穷尽所有策略。做市与套利仅在快速周转时与广义剥头皮重叠。</p></div>
+ </section>
+ <section class="view" id="view-map" aria-labelledby="map-title" hidden>
+  <div class="page-title"><div class="eyebrow">02 / STRATEGY ATLAS</div><h1 id="map-title">先认清，赚的是哪一种钱。</h1><p>点开任意模板，看图解、入场假设和失效条件。把相似策略放在一起比较。</p></div>
+  <div class="map-tools"><label class="search-box"><span data-icon="search"></span><input id="strategy-search" type="search" placeholder="搜索策略，例如：回踩、VWAP、强平" aria-label="搜索策略"></label><label class="toggle-label"><input id="recommended-only" type="checkbox">只看建议起步的模板</label></div>
+  <div class="family-tabs" id="family-tabs" role="group" aria-label="按策略家族筛选"></div>
+  <div id="family-summary" class="family-summary"></div>
+  <div class="results-line"><span id="results-count">26 个学习模板</span><span>“已完成”由你主动标记</span></div>
+  <div class="strategy-grid" id="strategy-grid"></div><div class="empty-state" id="empty-state" hidden>没有找到匹配的模板。试试“回归”“做市”或清除筛选。</div>
+ </section>
+ <section class="view" id="view-demo" aria-labelledby="demo-title" hidden>
+  <div class="page-title"><div class="eyebrow">03 / FOLLOW THE CHART</div><h1 id="demo-title">一张图，跟着走一遍。</h1><p>每按一次“下一步”，只揭示当前阶段。成功与失败都是人为构造的教学路径。</p></div>
+  <div class="demo-tabs" role="group" aria-label="选择演练"><button data-lesson="retest" class="active">01 突破—回踩确认</button><button data-lesson="fake">02 假突破回归</button><button data-lesson="flow">03 吸收 vs 衰竭</button></div>
+  <div class="demo-layout"><div class="demo-left"><div class="dark-chart demo-chart"><div class="chart-top"><span id="demo-chart-label">突破—回踩确认</span><span class="mono">合成价格 · 非市场回放</span></div><div id="demo-svg"></div><div class="chart-bottom"><span id="demo-chart-caption">观察已知结构，不预判未来。</span></div></div>
+   <div class="playback"><button class="round-btn" id="step-reset" aria-label="重置演练" title="重置">↺</button><button class="round-btn" id="step-prev" aria-label="上一步">←</button><button class="btn primary compact" id="step-play">播放</button><button class="btn soft compact" id="step-next">下一步 →</button><span class="mono" id="step-counter">01 / 05</span></div>
+   <div class="step-track" id="step-track"></div>
+   <div class="branch-choice"><span>教学路径</span><div class="segmented"><button id="branch-success" class="active">成功案例</button><button id="branch-failure">失败案例</button></div><small>切换会从头开始；不代表成功概率。</small></div>
+  </div><div class="step-panel"><div class="eyebrow" id="step-eyebrow">STEP 01 · 观察</div><h2 id="step-title"></h2><p id="step-description" aria-live="polite"></p><div class="focus-box"><span class="tiny-tag">此刻问自己</span><p id="step-question"></p></div><div class="step-warning" id="step-warning"></div><button class="text-button" id="demo-detail">查看对应策略卡 →</button></div></div>
+  <div class="quiz card" id="quiz" hidden><div class="eyebrow">CHECK YOUR UNDERSTANDING</div><h3 id="quiz-question"></h3><div id="quiz-options"></div><p id="quiz-feedback" role="status"></p></div>
+  <div class="callout"><span data-icon="info"></span><p>演练中出现的价格、等待 3 根 K 线等阈值均为教学设定，不是通用参数。实际止损可能滑点；确认信号也可能失败。</p></div>
+ </section>
+ <section class="view" id="view-cost" aria-labelledby="cost-title" hidden>
+  <div class="page-title"><div class="eyebrow">04 / THE COST LAB</div><h1 id="cost-title">看对方向，也可能亏钱。</h1><p>拖动胜率、改变费用，看看微小利润怎样被执行成本吃掉。所有初值都是教学假设。</p></div>
+  <div class="preset-row"><span>经典例子 · 往返成本</span><button data-cost="2" class="chip active">2 bp</button><button data-cost="6" class="chip">6 bp</button><button data-cost="10" class="chip">10 bp</button><span class="muted small">1 bp = 0.01%</span></div>
+  <div class="cost-layout"><div class="card cost-inputs"><div class="card-heading"><h3>设定你的假设</h3><span class="tiny-tag">非交易所费率</span></div><div class="input-grid"><label>毛盈利目标 <span>bp</span><input id="calc-g" type="number" min="0.01" step="0.1" value="15"></label><label>毛亏损幅度 <span>bp</span><input id="calc-l" type="number" min="0.01" step="0.1" value="10"></label></div><label class="win-label">假设胜率 <span><input id="calc-p" type="number" min="0" max="100" step="1" value="60" aria-label="假设胜率百分数"> %</span></label><input id="p-slider" type="range" min="0" max="100" value="60" aria-label="调整假设胜率"><div class="range-label"><span>0%</span><span>这不是实测胜率</span><span>100%</span></div>
+  <details class="advanced" open><summary>执行成本：盈利单与亏损单分开计算</summary><div class="input-grid"><label>开仓费 <span>bp / 单次</span><input id="calc-entry" type="number" min="0" step="0.1" value="1"></label><label>盈利退出费 <span>bp / 单次</span><input id="calc-winExit" type="number" min="0" step="0.1" value="1"></label><label>亏损退出费 <span>bp / 单次</span><input id="calc-lossExit" type="number" min="0" step="0.1" value="1"></label><label>盈利单滑点与价差 <span>bp / 完整往返</span><input id="calc-winSlip" type="number" min="0" step="0.1" value="0"></label><label>亏损单滑点与价差 <span>bp / 完整往返</span><input id="calc-lossSlip" type="number" min="0" step="0.1" value="0"></label><label>单笔名义金额 <span>USDT</span><input id="calc-n" type="number" min="1" step="100" value="1000"></label></div></details>
+  <div class="execution-presets"><span>演示执行组合</span><select id="execution-mode" aria-label="执行组合"><option value="custom">手动 / 当前设定</option><option value="mm">Maker → Maker</option><option value="mt">Maker → Taker</option><option value="tm">Taker → Maker（止损 Taker）</option><option value="tt">Taker → Taker</option></select><small>演示费率：Maker 1 bp、Taker 3 bp；不是平台报价。挂单不保证成交。<button class="inline-ref" data-source="1">[1]</button></small></div><div id="calc-error" class="error-box" role="alert" hidden></div></div>
+  <div class="cost-results"><div class="result-hero dark-chart"><span class="eyebrow">盈亏平衡所需胜率</span><div id="breakeven-value">48.0%</div><p id="calc-status" aria-live="polite">先覆盖成本，再谈优势。</p><div class="result-pair"><div><span>盈利单净收益</span><strong id="net-win">+13.0 bp</strong></div><div><span>亏损单净损失</span><strong id="net-loss">−12.0 bp</strong></div></div></div>
+  <div class="card expectation"><div class="card-heading"><h3>每轮数学期望</h3><span id="expectancy-value">+3.00 bp</span></div><div id="cost-svg"></div><div class="money-line"><span>按当前名义金额折算</span><b id="money-value">+0.3000 USDT / 轮</b></div><p class="small muted">是输入假设的数学结果，不是预测收益，也不是账户回报率。图中仅改变胜率，其他条件固定。</p></div></div></div>
+  <div class="formula-grid"><div class="card"><span class="tiny-tag">计算逻辑</span><h3>把每一种结果算完整</h3><p>W = 毛盈利 − 盈利单完整成本<br>D = 毛亏损 + 亏损单完整成本<br>E = p × W − (1 − p) × D<br>平衡胜率 = D / (W + D)</p><small>p 用 0–1 表示。资金费、借币和Gas等若适用，须另计或纳入输入。本基础模型不支持负费率返佣。</small></div><div class="card"><span class="tiny-tag">双腿不等于两次费用</span><h3>基差收敛的一轮，有四次成交</h3><div class="mini-flow"><span>买现货<br>卖永续</span><b>→</b><span>价差缩小</span><b>→</b><span>卖现货<br>买永续</span></div><p class="small">假设基差从 0.30% 到 0.08%，毛空间约 22 bp；4 次各 5 bp 的费用后仅余 2 bp，尚未计其他成本。按相同名义金额近似。<button class="inline-ref" data-source="7">[7]</button></p></div></div>
+  <div class="callout"><span data-icon="info"></span><p>不要重复扣费：如果用真实成交价算损益，已包含的价差或滑点不应再扣一遍。费用取决于账户、交易对和实际成交方式，而不是只看“限价单”三个字。<button class="inline-ref" data-source="1">[1]</button></p></div>
+ </section>
+ <section class="view" id="view-plan" aria-labelledby="plan-title" hidden>
+  <div class="page-title"><div class="eyebrow">05 / YOUR LEARNING JOURNAL</div><h1 id="plan-title">跟随流程，不跟随冲动。</h1><p>完成学习路线，再写一张模拟卡。所有记录只保存在当前浏览器，不上传。</p></div>
+  <div class="learning-route" id="learning-route"></div><div class="journal-layout"><div class="card checklist-card"><div class="card-heading"><h3>模拟前的 5 个问题</h3><span class="tiny-tag">不是交易许可</span></div><div id="checklist"></div><div class="check-status" id="check-status">先把假设写明，再勾选。</div><div class="mini-note">即使全部完成，也不证明有交易优势或可以安全实盘。</div></div>
+  <div class="card journal"><div class="card-heading"><h3>我的模拟交易卡</h3><span class="saved-label" id="saved-label">仅本地</span></div><div class="input-grid"><label>选择一个模板<select id="note-strategy"></select></label><label>观察周期<input id="note-period" placeholder="例如：5分钟看环境，1分钟观察触发"></label></div><div class="input-grid" id="note-fields"></div><div class="journal-actions"><button class="btn primary" id="export-note">生成 / 复制模拟卡 ↗</button><button class="text-button danger-text" id="clear-note">清空此卡</button></div><textarea id="note-export" aria-label="可复制的模拟卡文本" readonly hidden></textarea><p id="copy-status" class="small muted" role="status"></p></div></div>
+  <div class="card progress-card"><div><h3>已完成 <span id="completed-count">0</span> / 26 个策略模板</h3><p class="small muted">仅记录你主动标记的章节，不代表策略通过盈利验证。不同浏览器或移动文件位置后，记录可能不共享。</p></div><button class="text-button danger-text" id="reset-progress">重置学习标记</button></div>
+ </section>
+ <section class="view" id="view-terms" aria-labelledby="terms-title" hidden>
+  <div class="page-title"><div class="eyebrow">06 / GLOSSARY & REFERENCES</div><h1 id="terms-title">把术语翻译成人话。</h1><p>机制说明与盈利证据是两回事。下面的原始资料支持概念，不证明这 26 个模板有效。</p></div><div id="glossary" class="glossary-grid"></div><div class="section-heading"><div><div class="eyebrow">PRIMARY SOURCES</div><h2>来源与方法</h2></div><span class="small muted">资料核对：2026-11-11</span></div><div class="source-list" id="source-list"></div><div class="callout"><span data-icon="info"></span><p>策略分类、练习情节和图中价格为本教材整理或构造。原始资料仅引用机制，不搬用营销式收益承诺；未提供实盘回测、盈利排名或投资适当性结论。</p></div>
+ </section>
+ <footer><span class="footer-brand">SCALP LAB <span>/</span> Learn the logic. Respect the risk.</span><p>教育用途 · 所有图表为教学示意 · 杠杆、滑点与流动性可能扩大损失</p><button class="text-button" data-nav="terms">术语、来源与方法 ↗</button></footer>
+</main>
+<nav class="mobile-nav" aria-label="移动主导航"><button data-nav="home" class="active"><span data-icon="home"></span><span>总览</span></button><button data-nav="map"><span data-icon="grid"></span><span>策略</span></button><button data-nav="demo"><span data-icon="play"></span><span>演练</span></button><button data-nav="cost"><span data-icon="calc"></span><span>成本</span></button><button data-nav="plan"><span data-icon="check"></span><span>清单</span></button></nav>
+<dialog id="strategy-dialog"><div class="dialog-top"><span id="detail-eyebrow" class="eyebrow"></span><button id="close-dialog" class="round-btn" aria-label="关闭策略详情">×</button></div><div class="dialog-body" id="detail-content"></div><div class="dialog-bottom"><button class="btn primary" id="mark-complete">标记本节完成 ✓</button><button class="text-button" id="next-strategy">下一个模板 →</button></div></dialog>
+<div id="toast" role="status" hidden></div>
+<noscript><div class="noscript">这个离线网页需要浏览器运行 JavaScript 才能展示图解与交互。请在支持脚本的浏览器中打开，而不是文件静态预览。</div></noscript>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>
